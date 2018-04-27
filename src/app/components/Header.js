@@ -1,19 +1,16 @@
-import React, { Component } from 'react'
+// stateless component
+import React from 'react'
 
-export class Header extends Component {
-  render () {
-    return (
-      <nav className='navbar navbar-default'>
-        <div className='container'>
-          <div className='navbar-header'>
-            <ul className='nav navbar-nav'>
-              <li><a href='#'>Home</a></li>
-            </ul>
-          </div>
+export const Header = (props) => {
+  return (
+    <nav className='navbar navbar-default'>
+      <div className='container'>
+        <div className='navbar-header'>
+          <ul className='nav navbar-nav'>
+            <li><a href='#'>Home</a></li>
+          </ul>
         </div>
-      </nav>
-    )
-  }
+      </div>
+    </nav>
+  )
 }
-
-// export default Header
