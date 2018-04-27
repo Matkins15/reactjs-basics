@@ -9,7 +9,7 @@ class App extends Component {
       name: 'Matthew Atkins',
       title: 'Front-End-Developer',
       location: 'Atlanta, GA',
-      age: 30
+      initialAge: 30
     }
     return (
       <div className='container'>

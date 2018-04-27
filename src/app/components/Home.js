@@ -1,17 +1,31 @@
 import React, { Component } from 'react'
 
 export class Home extends Component {
+  constructor (props) {
+    super()
+    this.state = {
+      age: props.user.initialAge,
+      status: 0
+    }
+  }
+  onMakeOlder (props) {
+    this.setState({
+      age: this.state.age += 2
+    })
+  }
   render () {
     console.log(this.props)
     return (
       <div>
-        <h1>{this.props.user.name}</h1>
+        <h1>My name is {this.props.user.name}, and i'm {this.state.age} years old!</h1>
+        <p>Status: {this.state.status}</p>
         <h4>{this.props.user.title}</h4>
         <h6>{this.props.user.location}</h6>
         <div>
           {this.props.children}
         </div>
-
+        <hr />
+        <button onClick={this.onMakeOlder.bind(this)} className='btn btn-primary'> Make Me Older</button>
       </div>
     )
   }
