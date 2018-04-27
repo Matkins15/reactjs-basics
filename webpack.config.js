@@ -9,6 +9,7 @@ var config = {
   // file that you should start your transpiling and bundling journey in
   entry: SRC_DIR + '/app/index.js', // index.js will be root file, file that starts the application
   // tells webpack where to output everything
+  mode: 'development',
   output: {
     path: DIST_DIR + '/app',
     filename: 'bundle.js',
