@@ -4,7 +4,8 @@ export class Home extends Component {
   constructor (props) {
     super()
     this.state = {
-      age: props.user.initialAge
+      age: props.user.initialAge,
+      homeLink: 'Change Link'
     }
   }
   onMakeOlder (props) {
@@ -12,6 +13,11 @@ export class Home extends Component {
       age: this.state.age += 2
     })
   }
+
+  onChangeLink () {
+    this.props.link(this.state.homeLink)
+  }
+
   render () {
     console.log(this.props)
     return (
@@ -26,6 +32,8 @@ export class Home extends Component {
         <button onClick={this.onMakeOlder.bind(this)} className='btn btn-primary'> Make Me Older</button>
         <hr />
         <button onClick={this.props.greet} className='btn btn-primary'> Greet</button>
+        <hr />
+        <button onClick={this.onChangeLink.bind(this)} className='btn btn-success'>Change Header</button>
       </div>
     )
   }
