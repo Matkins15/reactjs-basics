@@ -24,6 +24,8 @@ export class Home extends Component {
         </div>
         <hr />
         <button onClick={this.onMakeOlder.bind(this)} className='btn btn-primary'> Make Me Older</button>
+        <hr />
+        <button onClick={this.props.greet} className='btn btn-primary'> Greet</button>
       </div>
     )
   }
